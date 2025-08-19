@@ -14,13 +14,24 @@ Desarrollada por **Marlon Arcila**.
 
 ## 🏗️ Estructura del Proyecto
 
-- `index.html` — Página principal con información institucional.
-- `about.html` — Sección sobre la historia y misión de la IE.
-- `contact.html` — Formulario de contacto y datos de ubicación.
-- `assets/` — Recursos estáticos como imágenes, hojas de estilo y scripts.
-  - `css/` — Archivos de estilos (CSS).
-  - `js/` — Scripts de funcionalidad (JavaScript).
-  - `img/` — Imágenes institucionales y logotipos.
+```
+webCapilla/
+├── public/
+│   ├── index.html         # Página principal con información institucional
+│   ├── about.html         # Sección sobre la historia y misión de la IE
+│   ├── contact.html       # Formulario de contacto y datos de ubicación
+│   └── assets/
+│       ├── css/           # Archivos de estilos (CSS)
+│       ├── js/            # Scripts de funcionalidad (JavaScript)
+│       └── img/           # Imágenes institucionales y logotipos
+├── README.md              # Información del proyecto
+└── package.json           # (Opcional) Configuración de dependencias y scripts
+```
+
+- `public/` — Contiene los archivos públicos y estáticos del sitio web.
+- `assets/` — Recursos estáticos organizados en subcarpetas.
+- `README.md` — Este archivo.
+- `package.json` — Archivo de configuración si se usan dependencias externas o herramientas de construcción.
 
 ---
 
