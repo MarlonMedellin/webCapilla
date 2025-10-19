@@ -3,7 +3,7 @@
 <!-- Badges -->
 
 - ![CI](https://img.shields.io/github/actions/workflow/status/MarlonMedellin/webCapilla/.github/workflows/ci.yml?branch=main&label=CI&logo=github)
-- ![Pages](https://img.shields.io/github/actions/workflow/status/MarlonMedellin/webCapilla/.github/workflows/pages.yml?branch=main&label=Pages&logo=github)
+- ![Lint](https://img.shields.io/github/actions/workflow/status/MarlonMedellin/webCapilla/.github/workflows/ci.yml?branch=main&label=Lint&logo=github)
 - ![Latest Commit](https://img.shields.io/github/commit-activity/m/MarlonMedellin/webCapilla)
 - ![License](https://img.shields.io/github/license/MarlonMedellin/webCapilla)
 
