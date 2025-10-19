@@ -1,5 +1,12 @@
 ﻿# webCapilla — IE Capilla del Rosario
 
+<!-- Badges -->
+
+- ![CI](https://img.shields.io/github/actions/workflow/status/MarlonMedellin/webCapilla/.github/workflows/ci.yml?branch=main&label=CI&logo=github)
+- ![Pages](https://img.shields.io/github/actions/workflow/status/MarlonMedellin/webCapilla/.github/workflows/pages.yml?branch=main&label=Pages&logo=github)
+- ![Latest Commit](https://img.shields.io/github/commit-activity/m/MarlonMedellin/webCapilla)
+- ![License](https://img.shields.io/github/license/MarlonMedellin/webCapilla)
+
 Estado: en desarrollo
 
 Repositorio para el sitio institucional de la Institución Educativa Capilla del Rosario (Medellín).
