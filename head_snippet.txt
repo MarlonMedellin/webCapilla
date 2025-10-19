@@ -1,0 +1,9 @@
+﻿<!doctype html>
+<html lang="es" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IE Capilla del Rosario — Sitio Institucional</title>
+  <meta name="description" content="Sitio web oficial de la Institución Educativa Capilla del Rosario. Encuentre información sobre matrículas, cupos, programas, jornadas, proyectos y comunicados.">
+  <meta name="keywords" content="educación, colegio, capilla del rosario, Medellín, matrícula, institucional">
+  <meta property="og:title" content="IE Capilla del Rosario 
