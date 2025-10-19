@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: read
+  checks: write
+  statuses: write
 
 jobs:
   lint:
@@ -24,6 +26,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_HTML: true
           VALIDATE_MARKDOWN: true
+          VALIDATE_CSS: true
 
   link-check:
     name: Check links (Lychee)
