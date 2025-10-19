@@ -180,20 +180,28 @@ El listado estará disponible en formato **PDF** en esta sección del sitio web 
 
 ## 6. Novedades Institucionales
 
-Enlaces de interés para la comunidad educativa:  
-- [Agenda Institucional](#)  
+Enlaces de interés para la comunidad educativa:
+
+- [Agenda Institucional](index.html#novedades)
 - [Información para Docentes](https://www.medellin.gov.co/es/secretaria-de-educacion/maestros/)
 
 ---
 
+
 ## 7. Circulares
 
-**Circulares Institucionales**
-1. [Circular No. 202360000209 – 30/11/2023](https://www.medellin.edu.co/wp-content/uploads/Circular-orientaciones-2023-2024.pdf)  
-   Orientaciones para atención educativa a estudiantes con talentos excepcionales.  
-2. [Circular No. 202460000037 – 01/02/2024](https://www.medellin.edu.co/wp-content/uploads/2025/07/CIRCULAR-ELECCION-CONSEJO-DE-PADRES.pdf)  
-   Elección del Consejo de Padres y participación familiar.  
-3. [Circular No. 202530057256 – 2025](https://www.medellin.edu.co/wp-content/uploads/2025/07/202530057256-Circular-Consejo-de-Padres.pdf)  
+### Circulares Institucionales
+
+1. [Circular No. 202360000209 – 30/11/2023](https://www.medellin.edu.co/wp-content/uploads/Circular-orientaciones-2023-2024.pdf)
+
+   Orientaciones para atención educativa a estudiantes con talentos excepcionales.
+
+2. [Circular No. 202460000037 – 01/02/2024](https://www.medellin.edu.co/wp-content/uploads/2025/07/CIRCULAR-ELECCION-CONSEJO-DE-PADRES.pdf)
+
+   Elección del Consejo de Padres y participación familiar.
+
+3. [Circular No. 202530057256 – 2025](https://www.medellin.edu.co/wp-content/uploads/2025/07/202530057256-Circular-Consejo-de-Padres.pdf)
+
    Elección del Consejo de Padres, Madres y Cuidadores.
 
 **Nota:** Las auxiliares administrativas deben entregar las circulares en formato PDF para su publicación.
@@ -211,11 +219,14 @@ Quienes no estén de acuerdo deberán comunicarse directamente con el Rector.
 
 ## 9. Contacto Actualizado
 
-**Teléfono:** 604 331 093  
-**Correos:**  
-- [ie.capilladelrosario@yahoo.es](mailto:ie.capilladelrosario@yahoo.es)  
-- [secretarialacapilla.edu.co](mailto:secretarialacapilla.edu.co)  
-**Dirección:** Cl. 6 Sur #79-195, Medellín, Antioquia  
+**Teléfono:** 604 331 093
+
+**Correos:**
+
+- [ie.capilladelrosario@yahoo.es](mailto:ie.capilladelrosario@yahoo.es)
+- [secretarialacapilla.edu.co](mailto:secretarialacapilla.edu.co)
+
+**Dirección:** Cl. 6 Sur #79-195, Medellín, Antioquia
 
 ---
 
