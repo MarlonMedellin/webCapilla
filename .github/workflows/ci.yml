@@ -24,9 +24,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_HTML: true
           VALIDATE_MARKDOWN: true
-          # Disable other linters to keep CI lightweight
-          VALIDATE_JAVASCRIPT_ES: false
-          VALIDATE_CSS: false
 
   link-check:
     name: Check links (Lychee)
