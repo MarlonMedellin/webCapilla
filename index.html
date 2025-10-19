@@ -3,574 +3,461 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- SEO y Metadatos para Redes Sociales -->
   <title>IE Capilla del Rosario — Sitio Institucional</title>
   <meta name="description" content="Sitio web oficial de la Institución Educativa Capilla del Rosario. Encuentre información sobre matrículas, cupos, programas, jornadas, proyectos y comunicados.">
   <meta name="keywords" content="educación, colegio, capilla del rosario, medellín, matrícula, institucional">
-  
-  <!-- Open Graph (para Facebook, WhatsApp, etc.) -->
   <meta property="og:title" content="IE Capilla del Rosario — Sitio Institucional">
   <meta property="og:description" content="Un Jardín de Ilusiones que Florece para la Vida.">
   <meta property="og:image" content="https://placehold.co/1200x630/1f3b8f/ffffff?text=IE+Capilla+del+Rosario">
   <meta property="og:url" content="https://marlonmedellin.github.io/webCapilla/">
   <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IE Capilla del Rosario — Sitio Institucional">
   <meta name="twitter:description" content="Un Jardín de Ilusiones que Florece para la Vida.">
   <meta name="twitter:image" content="https://placehold.co/1200x630/1f3b8f/ffffff?text=IE+Capilla+del+Rosario">
-
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  
-  <!-- Estilos Personalizados -->
   <style>
-    :root {
-      /* Paleta inspirada en azul mariano */
-      --marian-900: #142252; /* azul profundo */
-      --marian-700: #1f3b8f; /* marian blue */
-      --marian-500: #3b5fcc; /* acento */
-      --marian-100: #e9efff; /* fondo suave */
-      --neutral-900: #0f172a;
-      --neutral-600: #475569;
+    :root{--marian-900:#142252;--marian-700:#1f3b8f;--marian-500:#3b5fcc;--marian-100:#e9efff;--neutral-900:#0f172a;--neutral-600:#475569}
+    body{font-family:'Inter',sans-serif}
+    .navbar,.footer{background:var(--marian-900)}
+    .navbar-brand,.nav-link,.footer{color:#fff!important}
+    .nav-link{transition:color .3s ease,transform .3s ease}
+    .nav-link:hover{transform:translateY(-2px);color:var(--marian-100)!important}
+    .btn-primary{--bs-btn-bg:var(--marian-700);--bs-btn-border-color:var(--marian-700);--bs-btn-hover-bg:#2a4db0;--bs-btn-hover-border-color:#2a4db0;transition:background-color .3s ease}
+    .hero{background:linear-gradient(135deg,var(--marian-700),var(--marian-500));color:#fff}
+    .hero .badge{background:rgba(255,255,255,.2)}
+    .section-title{color:var(--neutral-900);border-left:6px solid var(--marian-500);padding-left:.8rem;margin-bottom:1.5rem;font-weight:700}
+    .card{border:0;box-shadow:0 6px 20px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
+    .card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
+    .card-title{color:var(--neutral-900)}
+    .text-muted{color:var(--neutral-600)!important}
+    .bg-soft{background:var(--marian-100)}
+    .logo{width:40px;height:40px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;color:var(--marian-700);font-weight:800;font-size:.9rem}
+    .navbar-toggler{border-color:rgba(255,255,255,.2)}
+    .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
+    /* Tabs visibility and brand colors */
+    /* Tabs remanufactured using Bootstrap CSS vars for reliability */
+    .nav-tabs{
+      border-bottom:2px solid var(--marian-100);
+      --bs-nav-link-color: var(--marian-700);
+      --bs-nav-link-hover-color: var(--marian-500);
+      --bs-nav-tabs-border-color: var(--marian-100);
+      --bs-nav-tabs-link-hover-border-color: var(--marian-100) var(--marian-100) var(--marian-100);
+      --bs-nav-tabs-link-active-color: #fff;
+      --bs-nav-tabs-link-active-bg: var(--marian-700);
+      --bs-nav-tabs-link-active-border-color: var(--marian-700);
     }
-
-    body {
-      font-family: 'Inter', sans-serif; /* Fuente más moderna y legible */
-    }
-
-    .navbar, .footer { 
-      background: var(--marian-900); 
-    }
-    .navbar-brand, .nav-link, .footer { 
-      color: #fff !important; 
-    }
-    .nav-link {
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .nav-link:hover {
-      transform: translateY(-2px);
-      color: var(--marian-100) !important;
-    }
-
-    .btn-primary {
-      --bs-btn-bg: var(--marian-700);
-      --bs-btn-border-color: var(--marian-700);
-      --bs-btn-hover-bg: #2a4db0;
-      --bs-btn-hover-border-color: #2a4db0;
-      transition: background-color 0.3s ease;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--marian-700), var(--marian-500));
-      color: #fff;
-    }
-    .hero .badge { 
-      background: rgba(255, 255, 255, .2); 
-    }
-
-    .section-title {
-      color: var(--neutral-900);
-      border-left: 6px solid var(--marian-500);
-      padding-left: .8rem;
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-    }
-
-    .card { 
-      border: 0; 
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .06); 
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
-    }
-    .card-title { 
-      color: var(--neutral-900); 
-    }
-    .text-muted { 
-      color: var(--neutral-600) !important; 
-    }
-    .bg-soft { 
-      background: var(--marian-100); 
-    }
-    a.card-link { 
-      text-decoration: none; 
-    }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--marian-700);
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-    
-    /* Mejora de accesibilidad para el icono del menú hamburguesa */
-    .navbar-toggler {
-      border-color: rgba(255,255,255,0.2);
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
+    .nav-tabs .nav-link{font-weight:600}
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <span class="logo">IE</span>
-      <span class="d-none d-md-inline">Institución Educativa Capilla del Rosario</span>
-      <span class="d-inline d-md-none">IE Capilla del Rosario</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menú de navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#matriculas">Matrícula</a></li>
-        <li class="nav-item"><a class="nav-link" href="#cupos">Cupos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#jornadas">Jornadas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#novedades">Novedades</a></li>
-        <li class="nav-item"><a class="nav-link" href="#circulares">Circulares</a></li>
-        <li class="nav-item"><a class="nav-link" href="#principios">Principios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#programas">Programas</a></li>
-        <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-2 px-3 py-1 mt-2 mt-lg-0" href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  
-</nav>
-
-<!-- HERO -->
-<header class="hero py-5">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-12 col-lg-7">
-        <span class="badge rounded-pill mb-2 px-3 py-2">Sitio oficial</span>
-        <h1 class="display-5 fw-bold mb-3">Un Jardín de Ilusiones que Florece para la Vida</h1>
-        <p class="lead mb-4">Bienvenidos a la Institución Educativa Capilla del Rosario. Aquí encontrará información clara sobre matrícula, cupos, programas, jornadas, proyectos y comunicaciones oficiales.</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="#matriculas" class="btn btn-light text-primary fw-semibold">Proceso de Matrícula</a>
-          <a href="#cupos" class="btn btn-outline-light">Cupos disponibles</a>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="logo">IE</span>
+        <span class="d-none d-md-inline">Institución Educativa Capilla del Rosario</span>
+        <span class="d-inline d-md-none">IE Capilla del Rosario</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#horizonte">Horizonte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#matriculas">Matrícula</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cupos">Cupos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jornadas">Jornadas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#novedades">Novedades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#circulares">Circulares</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-2 px-3 py-1 mt-2 mt-lg-0" href="#contacto">Contacto</a></li>
+        </ul>
       </div>
-      <div class="col-12 col-lg-5">
-        <div class="card">
-          <div class="card-body p-4">
-            <h5 class="card-title">Atención rápida</h5>
-            <p class="text-muted mb-3">¿Dudas sobre inscripción o traslados?</p>
-            <form>
-              <div class="row g-2">
-                <div class="col-12">
-                  <label for="fullName" class="visually-hidden">Nombres y apellidos</label>
-                  <input id="fullName" class="form-control" placeholder="Nombres y apellidos" required>
+    </div>
+  </nav>
+
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-12 col-lg-7">
+          <span class="badge rounded-pill mb-2 px-3 py-2">Sitio oficial</span>
+          <h1 class="display-5 fw-bold mb-3">Un Jardín de Ilusiones que Florece para la Vida</h1>
+          <p class="lead mb-4">Bienvenidos a la Institución Educativa Capilla del Rosario. Aquí encontrará información clara sobre matrícula, cupos, programas, jornadas, proyectos y comunicaciones oficiales.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#matriculas" class="btn btn-light text-primary fw-semibold">Proceso de Matrícula</a>
+            <a href="#cupos" class="btn btn-outline-light">Cupos disponibles</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="card">
+            <div class="card-body p-4">
+              <h5 class="card-title">Atención rápida</h5>
+              <p class="text-muted mb-3">¿Dudas sobre inscripción o traslados?</p>
+              <form>
+                <div class="row g-2">
+                  <div class="col-12">
+                    <label for="fullName" class="visually-hidden">Nombres y apellidos</label>
+                    <input id="fullName" class="form-control" placeholder="Nombres y apellidos" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="visually-hidden">Correo electrónico</label>
+                    <input id="email" type="email" class="form-control" placeholder="Correo electrónico" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="phone" class="visually-hidden">Teléfono de contacto</label>
+                    <input id="phone" type="tel" class="form-control" placeholder="Teléfono de contacto" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="topic" class="visually-hidden">Tema de interés</label>
+                    <select id="topic" class="form-select" aria-label="Tema">
+                      <option selected>Selecciona un tema</option>
+                      <option>Matrícula</option>
+                      <option>Cupos</option>
+                      <option>Certificados</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-primary" type="submit">Solicitar información</button>
+                  </div>
                 </div>
-                <div class="col-12">
-                  <label for="email" class="visually-hidden">Correo electrónico</label>
-                  <input id="email" type="email" class="form-control" placeholder="Correo electrónico" required>
-                </div>
-                <div class="col-12">
-                  <label for="phone" class="visually-hidden">Teléfono de contacto</label>
-                  <input id="phone" type="tel" class="form-control" placeholder="Teléfono de contacto" required>
-                </div>
-                <div class="col-12">
-                  <label for="topic" class="visually-hidden">Tema de interés</label>
-                  <select id="topic" class="form-select" aria-label="Tema">
-                    <option selected>Selecciona un tema</option>
-                    <option>Matrícula</option>
-                    <option>Cupos</option>
-                    <option>Certificados</option>
-                    <option>Otro</option>
-                  </select>
-                </div>
-                <div class="col-12 d-grid">
-                  <button class="btn btn-primary" type="submit">Solicitar información</button>
-                </div>
-              </div>
-              <small class="d-block mt-2 text-secondary">Tiempo estimado de respuesta: 1–2 días hábiles.</small>
-            </form>
+                <small class="d-block mt-2 text-secondary">Tiempo estimado de respuesta: 1–2 días hábiles.</small>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-</header>
+  </header>
 
-<main>
-  <!-- 2. MATRÍCULA -->
+  <section id="horizonte" class="py-5 bg-soft">
+    <div class="container">
+      <h2 class="section-title">Horizonte Internacional</h2>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-lg-7">
+          <div class="card h-100"><div class="card-body">
+            <h6>Filosofía de la Institución</h6>
+            <p class="mb-3">La <strong>Institución Educativa Capilla del Rosario</strong> es una institución de carácter oficial que promueve una educación basada en la formación de valores y en el conocimiento científico, deportivo y cultural.<br>
+            Su propósito es formar personas íntegras, críticas, analíticas, investigativas, participativas, con autonomía y sentido de justicia, capaces de desenvolverse en un entorno social complejo y exigente.</p>
+            <hr>
+            <h6>Misión</h6>
+            <p class="mb-3">La <strong>Institución Educativa Capilla del Rosario</strong> ofrece una educación integral e incluyente en los niveles de Preescolar, Básica Primaria, Modelos Flexibles, Secundaria y Media Técnica, mediante un currículo flexible que responde a las necesidades educativas con calidad humana.<br>
+            Forma personas críticas, reflexivas y participativas en la práctica de los valores y derechos humanos, comprometidas con el mejoramiento continuo.</p>
+            <hr>
+            <h6>Visión</h6>
+            <p class="mb-0">Para el año <strong>2030</strong>, la institución será reconocida como líder en desarrollo humano, promoviendo un currículo flexible e inclusivo que contribuya al mejoramiento de las condiciones del entorno como espacio formativo para toda su comunidad.</p>
+          </div></div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="card h-100"><div class="card-body">
+            <h6>Principios Institucionales</h6>
+            <ol class="mb-3 ps-3">
+              <li>El mundo es una realidad transformable que debe conocerse mediante un proceso continuo de aprendizaje.</li>
+              <li>El ser humano, como realidad integral, debe apropiarse teórica, práctica y estéticamente del mundo.</li>
+              <li>La educación es un proceso sistemático orientado al crecimiento integral mediante valores humanos y culturales.</li>
+              <li>El aprendizaje se fortalece en ambientes de libertad, responsabilidad y respeto.</li>
+              <li>El estudiante es gestor de su propio desarrollo y de su entorno.</li>
+              <li><strong>Corresponsabilidad:</strong> familia, escuela, sociedad y Estado comparten la formación integral del ciudadano.</li>
+              <li><strong>Diversidad:</strong> reconocimiento e inclusión de todas las personas sin distinción de género, etnia, orientación, discapacidad o creencia.</li>
+            </ol>
+            <h6>Valores Institucionales</h6>
+            <div class="table-responsive mb-3">
+              <table class="table table-sm">
+                <thead><tr><th>Valor</th><th>Descripción</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Amor</strong></td><td>Sentimiento que promueve paz interior, alegría y respeto por los demás.</td></tr>
+                  <tr><td><strong>Respeto</strong></td><td>Aprecio y reconocimiento por el otro.</td></tr>
+                  <tr><td><strong>Convivencia</strong></td><td>Relación armónica y pacífica con los demás.</td></tr>
+                  <tr><td><strong>Responsabilidad</strong></td><td>Cumplimiento de deberes y compromisos.</td></tr>
+                  <tr><td><strong>Solidaridad</strong></td><td>Compartir y ayudar al otro en comunidad.</td></tr>
+                  <tr><td><strong>Equidad</strong></td><td>Justicia e igualdad de trato sin discriminación.</td></tr>
+                  <tr><td><strong>Pluralismo</strong></td><td>Tolerancia y reconocimiento de la diferencia.</td></tr>
+                  <tr><td><strong>Libertad</strong></td><td>Capacidad de actuar según criterio propio respetando las normas.</td></tr>
+                  <tr><td><strong>Tolerancia</strong></td><td>Aceptación de ideas, creencias y estilos de vida distintos.</td></tr>
+                  <tr><td><strong>Medio ambiente</strong></td><td>Respeto y cuidado del entorno natural y social.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="row g-4 mt-1">
+        <div class="col-12">
+          <div class="card h-100"><div class="card-body">
+            <h6>Perfiles Institucionales</h6>
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <p class="mb-1"><strong>Estudiante</strong></p>
+                <ul class="mb-3 ps-3">
+                  <li>Respetuoso de la diferencia y del entorno.</li>
+                  <li>Responsable, reflexivo y con sentido crítico.</li>
+                  <li>Promueve la convivencia y el cuidado ambiental.</li>
+                </ul>
+                <p class="mb-1"><strong>Familia</strong></p>
+                <ul class="mb-0 ps-3">
+                  <li>Participa activamente en la educación.</li>
+                  <li>Conoce y respeta el Manual de Convivencia.</li>
+                  <li>Mantiene comunicación constante con la institución.</li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-6">
+                <p class="mb-1"><strong>Docente</strong></p>
+                <ul class="mb-3 ps-3">
+                  <li>Modelo ético y pedagógico.</li>
+                  <li>Promueve liderazgo, innovación y trabajo colaborativo.</li>
+                  <li>Se actualiza continuamente para mejorar la calidad educativa.</li>
+                </ul>
+                <p class="mb-1"><strong>Directivo Docente</strong></p>
+                <ul class="mb-0 ps-3">
+                  <li>Liderazgo humano, democrático y participativo.</li>
+                  <li>Fomenta relaciones respetuosas y horizontales en la gestión educativa.</li>
+                </ul>
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="matriculas" class="py-5">
     <div class="container">
       <h2 class="section-title">Proceso de Matrícula</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Cronograma</h5>
-              <p class="card-text text-muted">Fechas por periodo y jornadas. Publica aquí el calendario oficial.</p>
-              <a href="#" class="stretched-link">Ver calendario</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Requisitos</h5>
-              <ul class="mb-0 text-muted ps-3">
-                <li>Documento de identidad</li>
-                <li>Certificados anteriores</li>
-                <li>EPS y foto actual</li>
+      <div class="pt-2">
+        <div class="row g-4">
+          <!-- Columna: Alumnos nuevos -->
+          <div class="col-12 col-lg-6">
+            <div class="card h-100"><div class="card-body">
+              <h5 class="card-title">Alumnos nuevos</h5>
+              <p class="mb-1"><strong>Documentos Requeridos</strong></p>
+              <ul class="ps-3 mb-3">
+                <li>Documento de identidad (Registro Civil o Tarjeta de Identidad).</li>
+                <li>Certificado EPS o SISBEN.</li>
+                <li>Fotocopia de servicios públicos.</li>
+                <li>Hoja de vida.</li>
+                <li>Certificados académicos anteriores.</li>
               </ul>
-            </div>
+              <p class="mb-1"><strong>Procedimiento</strong></p>
+              <ul class="ps-3 mb-3">
+                <li>El trámite debe realizarlo padre o madre; si no pueden, un acudiente con autorización notariada.</li>
+                <li>La matrícula se formaliza al entregar todos los documentos originales.</li>
+              </ul>
+              <p class="mb-1"><strong>Uniforme</strong></p>
+              <ul class="ps-3 mb-0">
+                <li>Portar uniformes completos desde el primer día de clases.</li>
+                <li>Los proveedores oficiales están informados en la portería del colegio.</li>
+              </ul>
+            </div></div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Paso a paso</h5>
-              <ol class="mb-0 text-muted ps-3">
-                <li>Preinscripción en línea</li>
-                <li>Entrega de documentos</li>
-                <li>Validación y confirmación</li>
-              </ol>
-            </div>
+
+          <!-- Columna: Alumnos antiguos -->
+          <div class="col-12 col-lg-6">
+            <div class="card h-100"><div class="card-body">
+              <h5 class="card-title">Alumnos antiguos</h5>
+              <p class="mb-1"><strong>Documentos Requeridos</strong></p>
+              <ul class="ps-3 mb-3">
+                <li>Documento de identidad actualizado.</li>
+                <li>Certificado EPS o SISBEN vigente.</li>
+                <li>Factura de servicios públicos reciente.</li>
+                <li>Informe académico y de convivencia.</li>
+              </ul>
+              <p class="mb-1"><strong>Procedimiento</strong></p>
+              <ul class="ps-3 mb-3">
+                <li>Renovación a cargo del padre/madre o acudiente autorizado.</li>
+                <li>Requiere autorización autenticada si no asisten los padres.</li>
+              </ul>
+              <p class="mb-1"><strong>Requisitos Adicionales</strong></p>
+              <ul class="ps-3 mb-0">
+                <li>Estar al día con compromisos académicos, disciplinarios y financieros.</li>
+              </ul>
+            </div></div>
           </div>
-        </div>
-        <div class="col">
-          <a class="card h-100 card-link" href="#">
-            <div class="card-body">
-              <h5 class="card-title">Formularios</h5>
-              <p class="text-muted mb-0">Descarga los formatos oficiales para nuevos y antiguos.</p>
-            </div>
-          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. CUPOS -->
   <section id="cupos" class="py-5 bg-soft">
     <div class="container">
-      <h2 class="section-title">Cupos disponibles</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Por grado y jornada</h5>
-              <p class="text-muted mb-2">Publica tabla simple y actualizada.</p>
-              <a href="#" class="btn btn-primary btn-sm">Ver listado</a>
-            </div>
-          </div>
+      <h2 class="section-title">Inscripción y Cupos Disponibles</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <div class="card h-100"><div class="card-body">
+            <h5 class="card-title mb-3">Requisitos de Inscripción</h5>
+            <p class="mb-1"><strong>Documentos en Fotocopia</strong></p>
+            <ul class="ps-3 mb-3">
+              <li>Registro civil o documento de identidad.</li>
+              <li>EPS o SISBEN.</li>
+              <li>Carné de vacunas (si aplica).</li>
+              <li>Factura de servicios públicos.</li>
+              <li>Hoja de vida y certificados académicos previos.</li>
+            </ul>
+            <p class="mb-1"><strong>Entrega</strong></p>
+            <ul class="ps-3 mb-3">
+              <li>En carpeta manila rotulada con nombre completo y grado solicitado.</li>
+              <li>Documentos originales se presentan el día de la matrícula.</li>
+            </ul>
+            <p class="mb-0"><strong>Importante</strong><br>Inscripción válida solo con documentos completos y legibles.</p>
+          </div></div>
         </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Criterios de admisión</h5>
-              <p class="text-muted mb-0">Lineamientos, edades mínimas y máximas, prioridades.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <a class="card h-100 card-link" href="#">
-            <div class="card-body">
-              <h5 class="card-title">Proceso de selección</h5>
-              <p class="text-muted mb-0">Etapas claras, tiempos y responsables.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. PROYECTOS INSTITUCIONALES -->
-  <section id="proyectos" class="py-5">
-    <div class="container">
-      <h2 class="section-title">Proyectos Institucionales</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto de Bilingüismo</h5>
-              <p class="text-muted mb-0">Fomento del aprendizaje del inglés como segunda lengua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Escuela de Padres</h5>
-              <p class="text-muted mb-0">Espacios de formación y acompañamiento para familias.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto Ambiental (PRAE)</h5>
-              <p class="text-muted mb-0">Conciencia y acciones para el cuidado del medio ambiente.</p>
-            </div>
-          </div>
+        <div class="col-12 col-lg-4">
+          <div class="card h-100 border-primary"><div class="card-body">
+            <h5 class="card-title">Publicación de Estudiantes Aceptados</h5>
+            <p class="mb-3">Una vez verificada la documentación, se publicará el <strong>listado oficial de aceptados</strong> según los cupos disponibles.<br>
+            El listado estará disponible en formato <strong>PDF</strong> en esta sección del sitio web y será anunciado por los canales institucionales oficiales.</p>
+            <a href="assets/docs/aceptados.pdf" class="btn btn-outline-primary btn-sm disabled" aria-disabled="true">Descargar listado (próximamente)</a>
+          </div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. JORNADAS Y NIVELES -->
   <section id="jornadas" class="py-5 bg-soft">
     <div class="container">
       <h2 class="section-title">Jornadas y Niveles</h2>
       <div class="row g-4">
         <div class="col-12 col-lg-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Oferta Educativa</h5>
-              <ul class="text-muted mb-0 ps-3">
-                <li>Niveles: Preescolar, Primaria, Secundaria, Media</li>
-                <li>Jornadas: Mañana, Tarde, Nocturna</li>
-                <li>Énfasis académicos y metodologías pedagógicas</li>
-              </ul>
-            </div>
-          </div>
+          <div class="card h-100"><div class="card-body">
+            <h5 class="card-title">Niveles y Ciclos Educativos</h5>
+            <ul class="mb-3 ps-3">
+              <li><strong>Preescolar</strong>: Nivel de formación inicial.</li>
+              <li><strong>Básica Primaria</strong>: Grados 1° a 5°.</li>
+              <li><strong>Básica Secundaria</strong>: Grados 6° a 9°.</li>
+              <li><strong>Media Técnica (Comercio)</strong>: Grados 10° y 11°.</li>
+            </ul>
+            <h6>Programas y Proyectos</h6>
+            <ul class="mb-0 ps-3">
+              <li>Jardín y Preescolar</li>
+              <li>Básica Primaria y Secundaria</li>
+              <li>Media Técnica</li>
+              <li>Procesos Básicos y Aceleración del Aprendizaje</li>
+              <li>Programa “Caminar a la Secundaria”</li>
+            </ul>
+          </div></div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Horarios Detallados</h5>
-              <p class="text-muted">Consulte el documento oficial con los horarios por jornada y nivel educativo.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">Descargar horarios</a>
+          <div class="card h-100"><div class="card-body">
+            <h5 class="card-title">Horarios Académicos</h5>
+            <div class="table-responsive">
+              <table class="table table-sm">
+                <thead><tr><th>Nivel</th><th>Jornada</th><th>Horario</th></tr></thead>
+                <tbody>
+                  <tr><td>Preescolar</td><td>Mañana</td><td>7:00 a.m. – 12:00 p.m.</td></tr>
+                  <tr><td>Básica Primaria</td><td>Mañana</td><td>7:00 a.m. – 12:00 p.m.</td></tr>
+                  <tr><td>Secundaria</td><td>Mañana</td><td>6:00 a.m. – 12:00 p.m.</td></tr>
+                  <tr><td>Media Técnica</td><td>Tarde</td><td>1:00 p.m. – 5:00 p.m.</td></tr>
+                </tbody>
+              </table>
             </div>
-          </div>
+            <small class="text-secondary">Nota: Los horarios pueden ajustarse según disposiciones institucionales.</small>
+          </div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. NOVEDADES -->
+  <section id="proyectos" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Proyectos Institucionales</h2>
+      <div class="card"><div class="card-body">
+        <p class="mb-0"><em>(Incluir aquí la lista definitiva de proyectos institucionales y programas complementarios. Ejemplo: PRAE, Escuela de Padres, Bienestar Municipal, etc.)</em></p>
+      </div></div>
+    </div>
+  </section>
+
   <section id="novedades" class="py-5">
     <div class="container">
-      <h2 class="section-title">Novedades institucionales</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Oferta nueva</span>
-              <h5 class="card-title">Educación nocturna</h5>
-              <p class="text-muted mb-0">Inscripciones abiertas para el próximo ciclo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Servicio</span>
-              <h5 class="card-title">Ludoteca INDER</h5>
-              <p class="text-muted mb-0">Acompañamiento y recreación para estudiantes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Reconocimiento</span>
-              <h5 class="card-title">Logros académicos</h5>
-              <p class="text-muted mb-0">Resultados destacados en pruebas Saber.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title">Novedades Institucionales</h2>
+      <div class="card"><div class="card-body">
+        <p class="mb-2">Enlaces de interés para la comunidad educativa:</p>
+        <ul class="mb-0">
+          <li><a href="#">Agenda Institucional</a></li>
+          <li><a href="https://www.medellin.gov.co/es/secretaria-de-educacion/maestros/" target="_blank" rel="noopener noreferrer">Información para Docentes</a></li>
+        </ul>
+      </div></div>
     </div>
   </section>
 
-  <!-- 7. CIRCULARES Y COMUNICADOS -->
   <section id="circulares" class="py-5 bg-soft">
     <div class="container">
-      <h2 class="section-title">Circulares y comunicados</h2>
+      <h2 class="section-title">Circulares</h2>
       <div class="row g-4">
         <div class="col-12 col-lg-8">
           <div class="list-group shadow-sm">
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <a href="https://www.medellin.edu.co/wp-content/uploads/Circular-orientaciones-2023-2024.pdf" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
               <div>
-                <h6 class="mb-1">Circular 012 — 2025</h6>
-                <p class="mb-1 small text-muted">Información sobre el inicio del año escolar.</p>
+                <h6 class="mb-1">Circular No. 202360000209 – 30/11/2023</h6>
+                <p class="mb-1 small text-muted">Orientaciones para atención educativa a estudiantes con talentos excepcionales.</p>
               </div>
-              <small class="text-secondary">18/08/2025</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <a href="https://www.medellin.edu.co/wp-content/uploads/2025/07/CIRCULAR-ELECCION-CONSEJO-DE-PADRES.pdf" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
               <div>
-                <h6 class="mb-1">Comunicado: Cambios jornada</h6>
-                <p class="mb-1 small text-muted">Ajustes en los horarios de la jornada tarde.</p>
+                <h6 class="mb-1">Circular No. 202460000037 – 01/02/2024</h6>
+                <p class="mb-1 small text-muted">Elección del Consejo de Padres y participación familiar.</p>
               </div>
-              <small class="text-secondary">05/08/2025</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <a href="https://www.medellin.edu.co/wp-content/uploads/2025/07/202530057256-Circular-Consejo-de-Padres.pdf" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
               <div>
-                <h6 class="mb-1">Aviso padres de familia</h6>
-                <p class="mb-1 small text-muted">Invitación a la próxima reunión general.</p>
+                <h6 class="mb-1">Circular No. 202530057256 – 2025</h6>
+                <p class="mb-1 small text-muted">Elección del Consejo de Padres, Madres y Cuidadores.</p>
               </div>
-              <small class="text-secondary">30/07/2025</small>
             </a>
           </div>
+          <small class="text-secondary d-block mt-2">Las auxiliares administrativas deben entregar las circulares en formato PDF para su publicación.</small>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Descargables</h5>
-              <ul class="text-muted mb-0 ps-3">
-                <li>Resoluciones</li>
-                <li>Protocolos de bioseguridad</li>
-                <li>Actas de consejo</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- 8. PRINCIPIOS GENERALES -->
-  <section id="principios" class="py-5">
-    <div class="container">
-      <h2 class="section-title">Principios Generales</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Perfil del estudiante</h5>
-              <p class="text-muted mb-0">Valores, competencias ciudadanas y académicas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Misión y Visión</h5>
-              <p class="text-muted mb-0">Nuestro propósito institucional y horizonte formativo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Valores</h5>
-              <p class="text-muted mb-0">Fomentamos la convivencia, el respeto y la excelencia.</p>
-            </div>
-          </div>
+          <div class="card h-100"><div class="card-body">
+            <h5 class="card-title">Consentimiento Informado</h5>
+            <p class="text-muted">El presente documento corresponde al <strong>Consentimiento Informado de la Institución Educativa Capilla del Rosario</strong>, socializado ante la comunidad educativa.<br>
+            Quienes no estén de acuerdo deberán comunicarse directamente con el Rector.</p>
+            <a href="URL_DEL_ARCHIVO.pdf" class="btn btn-primary btn-sm disabled" aria-disabled="true">Descargar Consentimiento Informado (PDF)</a>
+          </div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. PROGRAMAS -->
-  <section id="programas" class="py-5 bg-soft">
-    <div class="container">
-      <h2 class="section-title">Programas Académicos</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="text-uppercase text-secondary mb-2 small">Educación inicial</h6>
-              <h5 class="card-title">Preescolar</h5>
-              <p class="text-muted">Ambientes protectores y desarrollo integral.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="text-uppercase text-secondary mb-2 small">Básica</h6>
-              <h5 class="card-title">Primaria y Secundaria</h5>
-              <p class="text-muted mb-0">Énfasis por áreas y proyectos transversales.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="text-uppercase text-secondary mb-2 small">Media</h6>
-              <h5 class="card-title">Media Académica/Técnica</h5>
-              <p class="text-muted mb-0">Articulación y orientación vocacional.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="text-uppercase text-secondary mb-2 small">Complementarios</h6>
-              <h5 class="card-title">Modelos flexibles</h5>
-              <p class="text-muted mb-0">Procesos básicos, aceleración, Escuela de Padres y más.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
   <section id="contacto" class="py-5">
     <div class="container">
-      <h2 class="section-title">Contacto</h2>
+      <h2 class="section-title">Contacto Actualizado</h2>
       <div class="row g-4">
-        <div class="col-12 col-lg-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Sede principal</h5>
-              <p class="text-muted mb-1">Dirección: Calle 00 # 00-00, Medellín</p>
-              <p class="text-muted mb-1">Teléfono: <a href="tel:+576040000000">(604) 000 00 00</a></p>
-              <p class="text-muted mb-3">Correo: <a href="mailto:secretaria@iecapilla.edu.co">secretaria@iecapilla.edu.co</a></p>
-              <a href="https://www.google.com/maps/search/?api=1&query=6.2442,-75.5812" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir en Google Maps</a>
+        <div class="col-12">
+          <div class="card h-100"><div class="card-body">
+            <h5 class="card-title">Sede principal</h5>
+            <p class="text-muted mb-1"><strong>Teléfono:</strong> 604 331 093</p>
+            <p class="text-muted mb-1"><strong>Correos:</strong><br>
+              <a href="mailto:ie.capilladelrosario@yahoo.es">ie.capilladelrosario@yahoo.es</a><br>
+              <a href="mailto:secretarialacapilla.edu.co">secretarialacapilla.edu.co</a>
+            </p>
+            <p class="text-muted mb-3"><strong>Dirección:</strong> Cl. 6 Sur #79-195, Medellín, Antioquia</p>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.440144559625!2d-75.6050129251969!3d6.205526993782302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46820a332a0511%3A0x9df3f6205aa4c8ca!2sCl.%206%20Sur%20%23%2079-195%2C%20El%20Rincon%2C%20Medell%C3%ADn%2C%20Bel%C3%A9n%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1760886099799!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">PQRS</h5>
-              <p class="text-muted">Radica peticiones, quejas, reclamos y sugerencias a través de nuestro canal oficial.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">Ir al formulario</a>
-            </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>
   </section>
-</main>
 
-<!-- FOOTER -->
-<footer class="footer py-4 mt-5">
-  <div class="container">
-    <div class="row gy-2 align-items-center">
-      <div class="col-12 col-md-6">
-        <small>© <span id="currentYear">2025</span> Institución Educativa Capilla del Rosario. Todos los derechos reservados.</small>
-      </div>
-      <div class="col-12 col-md-6 text-md-end">
-        <small><a class="text-white" href="#">Política de tratamiento de datos</a> · <a class="text-white" href="#">Mapa del sitio</a></small>
+  <footer class="footer py-4 mt-5">
+    <div class="container">
+      <div class="row gy-2 align-items-center">
+        <div class="col-12 col-md-6">
+          <small>© <span id="currentYear">2025</span> Institución Educativa Capilla del Rosario. Todos los derechos reservados.</small>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <small><a class="text-white" href="#">Política de tratamiento de datos</a> · <a class="text-white" href="#">Mapa del sitio</a></small>
+        </div>
       </div>
     </div>
-  </div>
-  
-</footer>
+  </footer>
 
-<!-- Bootstrap JS (bundle) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script>
-  // Actualiza el año del copyright automáticamente
-  document.getElementById('currentYear').textContent = new Date().getFullYear();
-  
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
