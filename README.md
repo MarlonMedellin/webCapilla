@@ -1,79 +1,86 @@
-﻿# Web IE Capilla del Rosario
+﻿# webCapilla — IE Capilla del Rosario
 
-![estado](https://img.shields.io/badge/estado-en%20desarrollo-orange)
-![tipo](https://img.shields.io/badge/tipo-sitio%20est%C3%A1tico-informational)
-![html5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![css3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
-[![website](https://img.shields.io/website?url=https%3A%2F%2Fmarlonmedellin.github.io%2FwebCapilla%2F)](https://marlonmedellin.github.io/webCapilla/)
-![last-commit](https://img.shields.io/github/last-commit/marlonmedellin/webCapilla)
-![issues](https://img.shields.io/github/issues/marlonmedellin/webCapilla)
-![license](https://img.shields.io/github/license/marlonmedellin/webCapilla)
-![contributors](https://img.shields.io/github/contributors/marlonmedellin/webCapilla)
-[![CI](https://img.shields.io/github/actions/workflow/status/marlonmedellin/webCapilla/ci.yml?branch=main)](https://github.com/marlonmedellin/webCapilla/actions)
+Estado: en desarrollo
 
-Bienvenido al repositorio oficial de la **Institución Educativa Capilla del Rosario** de Medellín.
+Repositorio para el sitio institucional de la Institución Educativa Capilla del Rosario (Medellín).
 
----
+Este proyecto contiene la versión estática del sitio web: la página principal y recursos asociados. El objetivo es ofrecer información institucional (matrículas, cupos, jornadas, proyectos, circulares y contacto) para la comunidad educativa.
 
-## Descripción
+## Contenido principal del repositorio
 
-Esta web proporciona información básica y relevante sobre la IE Capilla del Rosario, facilitando el acceso a estudiantes, padres y comunidad en general.
+- `index.html` — Página principal del sitio (sitio estático responsable de la mayor parte del contenido visible).
+- `head_snippet.txt` — Fragmento HTML/CSS/metadata usado en el head (meta tags, estilos y enlaces a fuentes/CDN).
+- `Agentes/ajustes.md` — Instrucciones y tareas de ajuste para actualizar la web (guía interna).
+- `Agentes/contenido.md` — Plantilla de contenidos (texto base para las secciones que se publicarán).
+- `README.md` — Este archivo.
 
-Desarrollada por **Marlon Arcila**.
+Si tienes más carpetas (por ejemplo `assets/` o `public/`) aparecerán en el árbol del proyecto y contendrán estilos, scripts o imágenes.
 
----
+## Cómo probar / ver el sitio localmente
 
-## Estructura del Proyecto
+El sitio es estático. Para una vista rápida basta con abrir `index.html` en un navegador. Para un servidor local (mejor para rutas relativas y pruebas):
 
-`
-webCapilla/
-├─ public/
-│  ├─ index.html         # Página principal con información institucional
-│  ├─ about.html         # Sección sobre la historia y misión de la IE
-│  ├─ contact.html       # Formulario de contacto y datos de ubicación
-│  └─ assets/
-│     ├─ css/            # Archivos de estilos (CSS)
-│     ├─ js/             # Scripts de funcionalidad (JavaScript)
-│     └─ img/            # Imágenes institucionales y logotipos
-├─ README.md             # Información del proyecto
-└─ package.json          # (Opcional) Configuración de dependencias y scripts
-`
+PowerShell (Windows):
 
-- public/ — Contiene los archivos públicos y estáticos del sitio web.
-- ssets/ — Recursos estáticos organizados en subcarpetas.
-- README.md — Este archivo.
-- package.json — Archivo de configuración si se usan dependencias externas o herramientas de construcción.
+```powershell
+# 1) Servir desde la carpeta del proyecto (puede requerir Python instalado)
+python -m http.server 8000
 
----
+# 2) Abrir en el navegador
+Start-Process "http://localhost:8000/index.html"
+```
 
-## Tecnologías Utilizadas
+Alternativas:
 
-- **HTML5** — Estructura semántica de las páginas.
-- **CSS3** — Estilos y diseño responsivo.
-- **JavaScript** — Funcionalidad interactiva.
-- **Bootstrap** (opcional) — Componentes y diseño adaptable.
-- **Git** — Control de versiones.
+- Usar la extensión Live Server de Visual Studio Code.
+- Cualquier servidor estático (http-server de npm, páginas GitHub Pages, etc.).
 
----
+## Dónde editar el contenido
 
-## Cómo contribuir
+- Contenido y estructura principal: editar `index.html`.
+- Fragmentos reutilizables (meta tags, estilos iniciales): `head_snippet.txt`.
+- Notas de mantenimiento, ajustes y listas de tareas: `Agentes/ajustes.md`.
+- Textos que deben completarse o sustituirse por el equipo: `Agentes/contenido.md`.
 
-1. Haz un fork del repositorio.
-2. Crea una rama para tu funcionalidad: git checkout -b feature/nueva-funcionalidad
-3. Realiza tus cambios y haz commit: git commit -am 'Agrega nueva funcionalidad'
-4. Haz push a la rama: git push origin feature/nueva-funcionalidad
-5. Abre un Pull Request.
+Para cambios de contenido frecuentes, lo ideal es mantener textos en archivos Markdown dentro de `Agentes/` y, si se desea, crear un pequeño script que los incluya en `index.html` durante una etapa de build.
 
----
+## Estructura sugerida (basada en el proyecto actual)
+
+- Banner / Hero
+- Horizonte institucional (misión, visión, principios)
+- Proceso de matrícula (nuevos / antiguos)
+- Cupos / Publicación de aceptados
+- Jornadas y niveles
+- Proyectos institucionales
+- Novedades / Circulares (PDFs)
+- Contacto (teléfonos, correos y mapa)
+
+Estas secciones ya aparecen en `index.html` y en los archivos dentro de `Agentes/` como bocetos o instrucciones.
+
+## Contribuir
+
+1. Haz fork del repositorio.
+2. Crea una rama con un nombre descriptivo: `git checkout -b feature/mi-cambio`.
+3. Haz commits claros y atómicos.
+4. Envía un push y abre un Pull Request describiendo los cambios.
+
+Buenas prácticas:
+
+- Mantén los textos en `Agentes/` si son contenido que debe revisarse con el equipo editorial.
+- Para assets (imágenes, PDFs) usa una carpeta `assets/` con subcarpetas `img/`, `docs/`, `css/`, `js/`.
+
+## Notas operativas y tareas pendientes
+
+- Revisar y completar los textos en `Agentes/contenido.md` antes de publicar.
+- Subir las circulares y documentos oficiales en `assets/docs/` y enlazarlos desde la sección de Circulares.
+- Verificar y actualizar los datos de contacto (teléfonos y correos) en `index.html`.
 
 ## Contacto
 
-Para sugerencias o reportes, por favor contacta a Marlon Arcila.
+Responsable del repo: Marlon Arcila
+
+Si necesitas que yo (o el equipo) incorpore cambios concretos en el HTML o genere versiones para despliegue (GitHub Pages), indícame qué sección actualizar y lo hago.
 
 ---
 
-> "La educación es el arma más poderosa que puedes usar para cambiar el mundo." — Nelson Mandela
-
----
+_README reconstruido automáticamente a partir de la estructura y los archivos actuales del proyecto._
