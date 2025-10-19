@@ -1,10 +1,10 @@
-# 🌹 Web IE Capilla del Rosario
+# Web IE Capilla del Rosario
 
 Bienvenido al repositorio oficial de la **Institución Educativa Capilla del Rosario** de Medellín.
 
 ---
 
-## 📚 Descripción
+## Descripción
 
 Esta web proporciona información básica y relevante sobre la IE Capilla del Rosario, facilitando el acceso a estudiantes, padres y comunidad en general.
 
@@ -12,20 +12,20 @@ Desarrollada por **Marlon Arcila**.
 
 ---
 
-## 🏗️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 webCapilla/
-├── public/
-│   ├── index.html         # Página principal con información institucional
-│   ├── about.html         # Sección sobre la historia y misión de la IE
-│   ├── contact.html       # Formulario de contacto y datos de ubicación
-│   └── assets/
-│       ├── css/           # Archivos de estilos (CSS)
-│       ├── js/            # Scripts de funcionalidad (JavaScript)
-│       └── img/           # Imágenes institucionales y logotipos
-├── README.md              # Información del proyecto
-└── package.json           # (Opcional) Configuración de dependencias y scripts
+└─ public/
+   ├─ index.html         # Página principal con información institucional
+   ├─ about.html         # Sección sobre la historia y misión de la IE
+   ├─ contact.html       # Formulario de contacto y datos de ubicación
+   └─ assets/
+      ├─ css/            # Archivos de estilos (CSS)
+      ├─ js/             # Scripts de funcionalidad (JavaScript)
+      └─ img/            # Imágenes institucionales y logotipos
+└─ README.md             # Información del proyecto
+└─ package.json          # (Opcional) Configuración de dependencias y scripts
 ```
 
 - `public/` — Contiene los archivos públicos y estáticos del sitio web.
@@ -35,7 +35,7 @@ webCapilla/
 
 ---
 
-## 💻 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **HTML5** — Estructura semántica de las páginas.
 - **CSS3** — Estilos y diseño responsivo.
@@ -45,7 +45,7 @@ webCapilla/
 
 ---
 
-## 🚀 Cómo contribuir
+## Cómo contribuir
 
 1. Haz un fork del repositorio.
 2. Crea una rama para tu funcionalidad: `git checkout -b feature/nueva-funcionalidad`
@@ -55,12 +55,13 @@ webCapilla/
 
 ---
 
-## 📞 Contacto
+## Contacto
 
 Para sugerencias o reportes, por favor contacta a Marlon Arcila.
 
 ---
 
-> _"La educación es el arma más poderosa que puedes usar para cambiar el mundo."_ — Nelson Mandela
+> "La educación es el arma más poderosa que puedes usar para cambiar el mundo." — Nelson Mandela
 
 ---
+
