@@ -10,6 +10,8 @@
 
 Estado: en desarrollo
 
+Licencia: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Atribución: Marlon Arcila.
+
 Repositorio para el sitio institucional de la Institución Educativa Capilla del Rosario (Medellín).
 
 Este proyecto contiene la versión estática del sitio web: la página principal y recursos asociados. El objetivo es ofrecer información institucional (matrículas, cupos, jornadas, proyectos, circulares y contacto) para la comunidad educativa.
